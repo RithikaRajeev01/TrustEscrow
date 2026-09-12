@@ -1,0 +1,96 @@
+# ==============================================================================
+# TrustEscrow+ Root .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Local Secrets (NEVER COMMIT)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.secret
+*.keystore
+
+# Streamlit local credentials
+.streamlit/secrets.toml
+
+# ------------------------------------------------------------------------------
+# 2. Node.js & Package Manager Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# 3. Frontend Build Outputs
+# ------------------------------------------------------------------------------
+frontend/dist/
+frontend/dist-ssr/
+dist/
+dist-ssr/
+*.local
+
+# ------------------------------------------------------------------------------
+# 4. Smart Contracts & Hardhat Build Artifacts / Compilation Caches
+# ------------------------------------------------------------------------------
+smart-contracts/artifacts/
+smart-contracts/cache/
+smart-contracts/typechain-types/
+smart-contracts/ignition/deployments/
+artifacts/
+cache/
+typechain/
+typechain-types/
+coverage/
+coverage.json
+*.lcov
+
+# ------------------------------------------------------------------------------
+# 5. Python Bytecode & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ------------------------------------------------------------------------------
+# 6. Operating System & Editor / IDE Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
